@@ -27,7 +27,7 @@ const burger = ( props ) => {
 
   const uniqueIngredients = Object.keys(props.ingredients); // ["salad", "bacon", "cheese", "meat"]
 
-  const transformedIngredients = uniqueIngredients.map(ingredientKey => {
+  let transformedIngredients = uniqueIngredients.map(ingredientKey => {
     const ingredientQuantity = props.ingredients[ingredientKey]; // Get the value of each key.
 
     const ingredientQuantityAllocation = Array(ingredientQuantity); // Allocates space for an array of length "ingredientQuantity"
@@ -50,6 +50,18 @@ const burger = ( props ) => {
       //})
     //});
 
+console.log('transformed? ', transformedIngredients);
+  // We now need to check for no ingredients
+  const numberOfIngredients = transformedIngredients.reduce((previousValue, currentValue) => {
+  console.log('prev', previousValue);
+  console.log('next', currentValue);
+    return previousValue.concat(currentValue);
+  }, []);
+
+console.log('full? ', numberOfIngredients);
+  if (numberOfIngredients.length === 0) {
+    transformedIngredients = <p>Please start adding ingredients!</p>;
+  }
   return (
     <div className={classes.Burger}>
       <BurgerIngredient type="bread-top" />
