@@ -71,7 +71,7 @@ class BurgerBuilder extends Component {
 
     for (let key in disabledInfo) {
       // Loop through each ingredient checking for 0 to disable or enable the buttons.
-      disabledInfo[key] = disabledInfo[key] <= 0
+      disabledInfo[key] = disabledInfo[key] <= 0;
     }
 
     return (
