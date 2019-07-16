@@ -4,7 +4,6 @@ import classes from './BurgerIngredient.css';
 
 class BurgerIngredient extends Component {
   render() {
-  console.log('??????????????????????', classes);
 
   let ingredient = null;
 
@@ -29,7 +28,7 @@ class BurgerIngredient extends Component {
     case ('salad'):
       ingredient = <div className={classes.Salad}></div>;
       break;
-    case ('Bacon'):
+    case ('bacon'):
       ingredient = <div className={classes.Bacon}></div>;
       break;
     default:
