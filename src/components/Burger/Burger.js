@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BurgerIngredient from './BurgerIngredient';
 
@@ -50,18 +51,14 @@ const burger = props => {
   //})
   //});
 
-  console.log('transformed? ', transformedIngredients);
   // We now need to check for no ingredients
   const numberOfIngredients = transformedIngredients.reduce(
     (previousValue, currentValue) => {
-      console.log('prev', previousValue);
-      console.log('next', currentValue);
       return previousValue.concat(currentValue);
     },
     []
   );
 
-  console.log('full? ', numberOfIngredients);
   if (numberOfIngredients.length === 0) {
     transformedIngredients = <p>Please start adding ingredients!</p>;
   }
@@ -74,4 +71,7 @@ const burger = props => {
   );
 };
 
+burger.propTypes = {
+  ingredients: PropTypes.array
+};
 export default burger;

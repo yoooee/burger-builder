@@ -3,6 +3,7 @@ import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../Aux/Aux';
 
 const withErrorHandler = (WrappedComponent, axiosInstance) => {
+  /* eslint-disable */
   return class extends Component {
     state = {
       error: null

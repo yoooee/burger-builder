@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './Toolbar.css';
 import Logo from '../../Logo/Logo';
@@ -17,4 +18,7 @@ const toolbar = props => (
   </header>
 );
 
+toolbar.propTypes = {
+  drawerToggleClicked: PropTypes.func
+};
 export default toolbar;

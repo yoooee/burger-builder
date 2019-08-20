@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Aux from '../Aux';
 import Toolbar from '../../components/Navigation/Toolbar';
@@ -35,4 +36,7 @@ class Layout extends Component {
   }
 }
 
+Layout.propTypes = {
+  children: PropTypes.element
+};
 export default Layout;

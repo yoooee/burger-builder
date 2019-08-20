@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './NavigationItem.css';
 
@@ -9,5 +10,11 @@ const navigationItem = props => (
     </a>
   </li>
 );
+
+navigationItem.propTypes = {
+  link: PropTypes.string,
+  active: PropTypes.booealn,
+  children: PropTypes.element
+};
 
 export default navigationItem;

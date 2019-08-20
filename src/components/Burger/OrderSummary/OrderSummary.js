@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Aux from '../../../hoc/Aux';
 import Button from '../../UI/Button';
@@ -38,5 +39,12 @@ class OrderSummary extends Component {
     );
   }
 }
+
+OrderSummary.propTypes = {
+  price: PropTypes.number,
+  ingredients: PropTypes.array,
+  purchaseCancelled: PropTypes.func,
+  purchaseContinued: PropTypes.func
+};
 
 export default OrderSummary;
