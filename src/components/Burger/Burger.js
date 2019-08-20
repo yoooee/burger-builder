@@ -4,8 +4,7 @@ import BurgerIngredient from './BurgerIngredient';
 
 import classes from './Burger.css';
 
-const burger = ( props ) => {
-
+const burger = props => {
   /* props.ingredients is in the following format
      ingredients: {
         salad: 1,
@@ -34,7 +33,7 @@ const burger = ( props ) => {
     const ingredientQuantityAllocation = Array(ingredientQuantity); // Allocates space for an array of length "ingredientQuantity"
 
     // Destructure the ingredientQuantityAllocation to create an actual array of undefineds.
-    const ingredientQuantityArray = [...ingredientQuantityAllocation];  // [undefined] or [undefined, undefined] depending on the value of ingredientQuantityAllocation.
+    const ingredientQuantityArray = [...ingredientQuantityAllocation]; // [undefined] or [undefined, undefined] depending on the value of ingredientQuantityAllocation.
 
     const newElement = ingredientQuantityArray.map((_, i) => {
       return <BurgerIngredient key={ingredientKey + i} type={ingredientKey} />;
@@ -45,21 +44,24 @@ const burger = ( props ) => {
 
   // A more concise way to do the same thing as above.
   //const transformedIngredients = Object.keys(props.ingredients)
-    //.map(igKey => {
-      //return [...Array(props.ingredients[igKey])].map((_, i) => {
-        //return <BurgerIngredient key={igKey + i} type={igKey} />;
-      //})
-    //});
+  //.map(igKey => {
+  //return [...Array(props.ingredients[igKey])].map((_, i) => {
+  //return <BurgerIngredient key={igKey + i} type={igKey} />;
+  //})
+  //});
 
-console.log('transformed? ', transformedIngredients);
+  console.log('transformed? ', transformedIngredients);
   // We now need to check for no ingredients
-  const numberOfIngredients = transformedIngredients.reduce((previousValue, currentValue) => {
-  console.log('prev', previousValue);
-  console.log('next', currentValue);
-    return previousValue.concat(currentValue);
-  }, []);
+  const numberOfIngredients = transformedIngredients.reduce(
+    (previousValue, currentValue) => {
+      console.log('prev', previousValue);
+      console.log('next', currentValue);
+      return previousValue.concat(currentValue);
+    },
+    []
+  );
 
-console.log('full? ', numberOfIngredients);
+  console.log('full? ', numberOfIngredients);
   if (numberOfIngredients.length === 0) {
     transformedIngredients = <p>Please start adding ingredients!</p>;
   }
