@@ -4,11 +4,12 @@ import Layout from './hoc/Layout';
 import BurgerBuilder from './containers/BurgerBuilder';
 
 class App extends Component {
+
   render() {
     return (
       <div>
         <Layout>
-          <BurgerBuilder></BurgerBuilder>
+          <BurgerBuilder />
         </Layout>
       </div>
     );
