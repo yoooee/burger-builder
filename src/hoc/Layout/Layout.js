@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Aux from '../Aux';
 import Toolbar from '../../components/Navigation/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer';
+import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
+import Checkout from '../../containers/Checkout/Checkout';
 
 import classes from './Layout.css';
 

@@ -36,17 +36,17 @@ class BurgerBuilder extends Component {
   componentDidMount() {
     axiosInstance
       .get('https://react-my-burger-db.firebaseio.com/ingredients.json')
-      .then(response => {
+      .then((response) => {
         this.setState({ ingredients: response.data });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ error: true });
       });
   }
 
   updatePurchaseState(ingredients) {
     const sum = Object.keys(ingredients)
-      .map(igKey => {
+      .map((igKey) => {
         return ingredients[igKey];
       })
       .reduce((sum, el) => {
@@ -56,7 +56,7 @@ class BurgerBuilder extends Component {
     this.setState({ purchaseable: sum > 0 });
   }
 
-  addIngredientHandler = type => {
+  addIngredientHandler = (type) => {
     const oldCount = this.state.ingredients[type];
     const updatedCount = oldCount + 1;
     const updatedIngredients = {
@@ -74,7 +74,7 @@ class BurgerBuilder extends Component {
     this.updatePurchaseState(updatedIngredients);
   };
 
-  removeIngredientHandler = type => {
+  removeIngredientHandler = (type) => {
     const oldCount = this.state.ingredients[type];
     if (oldCount <= 0) {
       return;
@@ -124,10 +124,10 @@ class BurgerBuilder extends Component {
 
     axiosInstance
       .post('/orders.json', order)
-      .then(response => {
+      .then((response) => {
         this.setState({ loading: false, purchasing: false });
       })
-      .catch(error => {
+      .catch((error) => {
         this.setState({ loading: false, purchasing: false });
       });
   };
