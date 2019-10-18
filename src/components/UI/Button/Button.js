@@ -15,7 +15,7 @@ const button = props => (
 button.propTypes = {
   btnType: PropTypes.string,
   clicked: PropTypes.func,
-  children: PropTypes.element
+  children: PropTypes.string
 };
 
 export default button;

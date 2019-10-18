@@ -36,8 +36,8 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  show: PropTypes.boolean,
-  modalClosed: PropTypes.boolean,
+  show: PropTypes.bool,
+  modalClosed: PropTypes.func,
   children: PropTypes.element
 };
 export default Modal;

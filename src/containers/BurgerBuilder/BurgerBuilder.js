@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import Aux from '../../hoc/Aux';
 import Burger from '../../components/Burger';
 import BuildControls from '../../components/Burger/BuildControls';
@@ -23,12 +23,6 @@ class BurgerBuilder extends Component {
   //super(props);
   //this.state = {...}
   //}
-
-  static get propTypes() {
-    return {
-      history: Array
-    };
-  }
 
   state = {
     ingredients: null,
@@ -189,5 +183,9 @@ class BurgerBuilder extends Component {
     );
   }
 }
+
+BurgerBuilder.propTypes = {
+  history: PropTypes.object
+};
 
 export default withErrorHandler(BurgerBuilder, axiosInstance);

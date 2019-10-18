@@ -21,9 +21,9 @@ const buildControl = props => (
 
 buildControl.propTypes = {
   label: PropTypes.string,
-  removed: PropTypes.boolean,
-  disabled: PropTypes.boolean,
-  added: PropTypes.boolean
+  removed: PropTypes.func,
+  disabled: PropTypes.bool,
+  added: PropTypes.func
 };
 
 export default buildControl;

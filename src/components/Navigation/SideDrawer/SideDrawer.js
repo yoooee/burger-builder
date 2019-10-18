@@ -31,8 +31,8 @@ const sideDrawer = props => {
 };
 
 sideDrawer.propTypes = {
-  open: PropTypes.boolean,
-  closed: PropTypes.boolean
+  open: PropTypes.bool,
+  closed: PropTypes.func
 };
 
 export default sideDrawer;

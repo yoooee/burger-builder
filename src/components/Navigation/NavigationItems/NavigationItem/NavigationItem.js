@@ -13,8 +13,8 @@ const navigationItem = props => (
 
 navigationItem.propTypes = {
   link: PropTypes.string,
-  active: PropTypes.booealn,
-  children: PropTypes.element
+  active: PropTypes.bool,
+  children: PropTypes.string
 };
 
 export default navigationItem;

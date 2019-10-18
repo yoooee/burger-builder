@@ -38,9 +38,11 @@ const buildControls = props => (
 
 buildControls.propTypes = {
   price: PropTypes.number,
-  disabled: PropTypes.boolean,
-  purchasable: PropTypes.boolean,
-  ordered: PropTypes.boolean
+  ingredientAdded: PropTypes.func,
+  ingredientRemoved: PropTypes.func,
+  disabled: PropTypes.object,
+  purchasable: PropTypes.bool,
+  ordered: PropTypes.func
 };
 
 export default buildControls;

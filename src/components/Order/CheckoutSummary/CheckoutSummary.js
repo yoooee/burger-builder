@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Burger from '../../Burger/Burger';
 import Button from '../../UI/Button/Button';
@@ -20,6 +21,12 @@ const CheckoutSummary = props => {
       </Button>
     </div>
   );
+};
+
+CheckoutSummary.propTypes = {
+  ingredinets: PropTypes.array,
+  checkoutCancelled: PropTypes.func,
+  checkoutContinued: PropTypes.func
 };
 
 export default CheckoutSummary;

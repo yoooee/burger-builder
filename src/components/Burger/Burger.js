@@ -72,6 +72,6 @@ const burger = props => {
 };
 
 burger.propTypes = {
-  ingredients: PropTypes.array
+  ingredients: PropTypes.object
 };
 export default burger;

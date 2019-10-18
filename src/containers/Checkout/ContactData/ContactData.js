@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import classes from './ContactData.css';
-import PropTypes from 'prop-types';
 import axiosInstance from '../../../axios-orders';
 
 class ContactData extends Component {
-  static get propTypes() {
-    return {
-      ingredients: {},
-      price: PropTypes.number,
-      history: PropTypes.array
-    };
-  }
-
   state = {
     name: '',
     email: '',
@@ -98,5 +90,11 @@ class ContactData extends Component {
     );
   }
 }
+
+ContactData.propTypes = {
+  ingredients: PropTypes.object,
+  price: PropTypes.number,
+  history: PropTypes.object
+};
 
 export default ContactData;

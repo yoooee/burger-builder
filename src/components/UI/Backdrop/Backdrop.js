@@ -9,7 +9,7 @@ const backdrop = props =>
   ) : null;
 
 backdrop.propTypes = {
-  show: PropTypes.boolean,
+  show: PropTypes.bool,
   clicked: PropTypes.func
 };
 

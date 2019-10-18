@@ -41,8 +41,8 @@ class OrderSummary extends Component {
 }
 
 OrderSummary.propTypes = {
-  price: PropTypes.number,
-  ingredients: PropTypes.array,
+  price: PropTypes.string,
+  ingredients: PropTypes.object,
   purchaseCancelled: PropTypes.func,
   purchaseContinued: PropTypes.func
 };
