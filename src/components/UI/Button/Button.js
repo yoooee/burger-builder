@@ -5,6 +5,7 @@ import classes from './Button.css';
 
 const button = props => (
   <button
+    disabled={props.disabled}
     className={[classes.Button, classes[props.btnType]].join(' ')}
     onClick={props.clicked}
   >
@@ -15,7 +16,8 @@ const button = props => (
 button.propTypes = {
   btnType: PropTypes.string,
   clicked: PropTypes.func,
-  children: PropTypes.string
+  children: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 export default button;
