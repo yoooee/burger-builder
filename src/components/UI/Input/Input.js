@@ -6,7 +6,7 @@ const input = props => {
   let inputElement = null;
   const inputClasses = [classes.InputElement];
 
-  if (props.invalid && props.shouldValidate) {
+  if (props.invalid && props.shouldValidate && props.touched) {
     inputClasses.push(classes.Invalid);
   }
 
@@ -74,7 +74,8 @@ input.propTypes = {
   label: PropTypes.string,
   changed: PropTypes.func,
   invalid: PropTypes.bool,
-  shouldValidate: PropTypes.bool
+  shouldValidate: PropTypes.bool,
+  touched: PropTypes.bool
 };
 
 export default input;
